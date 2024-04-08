@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Maker</h1>
+<form id="invoiceForm">
+    <div>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+    </div>
+    <div>
+        <label for="invoiceDate">Invoice Date:</label>
+        <input type="date" id="invoiceDate" name="invoiceDate" required>
+    </div>
+    <div>
+        <label for="invoiceNumber">Invoice Number:</label>
+        <input type="text" id="invoiceNumber" name="invoiceNumber" required>
+    </div>
+    <div id="products">
+        <!-- Product fields will be dynamically added here -->
+    </div>
+    <button type="button" onclick="addProduct()">Add Product</button>
+    <div id="preview"></div> <!-- Preview section -->
+    <div>
+        <label for="total">Total:</label>
+        <input type="text" id="total" name="total" readonly>
+    </div>
+	<button type="button" onclick="openPreviewPage()">Preview Invoice</button>
+    <button type="button" onclick="submitInvoice()">Submit Invoice</button>
+</form>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
